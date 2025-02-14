@@ -39,11 +39,11 @@ jobs:
             eval "$(ssh-agent -s)"
             ssh-add ~/.ssh/ssh-praktikan103
             echo "Cek folder project";
-            [ ! -d "$C:/SeniorProject_Nashatra/SeniorProject_Nashatra/" ] && 
+            [ ! -d "${HOME}/senpro/504580/modul02/senpro-github-action/" ] && 
 	      {
                 echo "Repository belum di-clone. Cloning...";
-                mkdir -p C:/SeniorProject_Nashatra/SeniorProject_Nashatra/;
-                cd C:/SeniorProject_Nashatra/SeniorProject_Nashatra/;
+                mkdir -p ~/senpro/504580/modul02;
+                cd ~/senpro/504580/modul02;
                 git clone https://github.com/nashatr4/senpro-github-action;
                 cd senpro-github-action;
                 echo "Install Package dan Build Project";
@@ -52,7 +52,7 @@ jobs:
               } ||
 	      {
                 echo "Repository sudah ada. Building...";
-                cd C:/SeniorProject_Nashatra/SeniorProject_Nashatra/;
+                cd ~/senpro/504580/modul02/senpro-github-action;
                 git restore .;
                 git pull origin main;
                 echo "Install Package dan Build Project";
