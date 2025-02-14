@@ -40,7 +40,7 @@ steps:
         ssh-add ~/.ssh/ssh-praktikan103
         echo "Cek folder project";
         [ ! -d "$C:/SeniorProject_Nashatra/SeniorProject_Nashatra/" ] && 
-	  {
+          {
             echo "Repository belum di-clone. Cloning...";
             mkdir -p C:/SeniorProject_Nashatra/SeniorProject_Nashatra/;
             cd C:/SeniorProject_Nashatra/SeniorProject_Nashatra/;
@@ -50,7 +50,7 @@ steps:
             npm install;
             npm run build;
           } || 
-	  {
+          {
             echo "Repository sudah ada. Building...";
             cd C:/SeniorProject_Nashatra/SeniorProject_Nashatra/;
             git restore .;
